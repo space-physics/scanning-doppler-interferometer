@@ -1,7 +1,6 @@
 from pathlib import Path
 import pandas
 from dateutil.parser import parse
-from scipy.io import readsav
 from matplotlib.pyplot import figure
 
 W4 =('>>>>>> Begin Section 04: [LOCAL_GEO_WINDS] -- Winds in m/s at the station location, aligned GEOGRAPHICALLY',
@@ -11,6 +10,7 @@ def plotsav(fn:Path):
     """Get what's in IDL .sav file
     https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.io.readsav.html
     """
+    from scipy.io import readsav
     dat = readsav(fn, python_dict=True)
 
     return dat

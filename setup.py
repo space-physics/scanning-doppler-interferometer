@@ -22,7 +22,8 @@ setup(name='ScanningDopplerInterferometer',
       install_requires=install_requires,
       tests_require=tests_require,
       extras_require={'tests':tests_require,
-                      'plots':['matplotlib'],},
+                      'plots':['matplotlib'],
+                      'io':['scipy']},
       python_requires='>=3.6',
       scripts=['PlotWinds.py']
 	  )
