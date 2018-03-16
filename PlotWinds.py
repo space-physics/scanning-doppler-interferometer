@@ -13,7 +13,7 @@ from pathlib import Path
 from matplotlib.pyplot import show
 #
 import scanning_doppler_interferometer as sdi
-
+import scanning_doppler_interferometer.plots as sdiplot
 
 if __name__ == '__main__':
     from argparse import ArgumentParser
@@ -27,6 +27,6 @@ if __name__ == '__main__':
         dat = sdi.plotsav(fn)
     else:
         dat = sdi.txt2dat(fn)
-        sdi.plotwinds(dat)
+        sdiplot.plotwinds(dat)
 
     show()

@@ -1,7 +1,6 @@
 from pathlib import Path
 import pandas
 from dateutil.parser import parse
-from matplotlib.pyplot import figure
 
 W4 =('>>>>>> Begin Section 04: [LOCAL_GEO_WINDS] -- Winds in m/s at the station location, aligned GEOGRAPHICALLY',
      '>>>>>> End Section 4')
@@ -45,13 +44,3 @@ def index_lineno(fn:Path, start_pat:str, end_pat:str=None) -> int:
                 break
 
     return start_index, end_index
-
-def plotwinds(dat):
-
-    ax = figure().gca()
-    ax.plot(dat['Begin Time'],dat.iloc[:,2:])
-    ax.set_title(dat.filename.name)
-    ax.set_ylabel('Wind Speed [m/s]')
-    ax.set_xlabel('Time [UTC]]')
-    ax.legend(dat.columns[2:].astype(str),loc='best')
-    ax.grid(True)
