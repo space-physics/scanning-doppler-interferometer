@@ -1,3 +1,5 @@
+; http://sdi_server.gi.alaska.edu/sdi_web_plots/sdi_arc.asp
+; does not run in GDL, requires IDL (sigh)
 
 pro sdi_ascii_parse_structure, struc, text
 
