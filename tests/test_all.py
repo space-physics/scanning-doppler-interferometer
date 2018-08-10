@@ -13,6 +13,7 @@ def test_txtload():
     dat = sdi.txt2dat(txtfn)
 
     assert isinstance(dat, pandas.DataFrame)
-    
+
+
 if __name__ == '__main__':
     pytest.main(['-x', __file__])
