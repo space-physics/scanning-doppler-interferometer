@@ -1,3 +1,4 @@
+.pytest_cache/
 *.sav
 .cache/
 # Byte-compiled / optimized / DLL files
