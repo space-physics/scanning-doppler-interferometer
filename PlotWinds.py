@@ -15,12 +15,12 @@ import scanning_doppler_interferometer.plots as sdiplot
 
 def main():
     p = ArgumentParser()
-    p.add_argument('fn')
+    p.add_argument("fn")
     p = p.parse_args()
 
     fn = Path(p.fn).expanduser()
 
-    if fn.suffix == '.sav':
+    if fn.suffix == ".sav":
         dat = sdi.plotsav(fn)
     else:
         dat = sdi.txt2dat(fn)
@@ -29,5 +29,5 @@ def main():
     show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
